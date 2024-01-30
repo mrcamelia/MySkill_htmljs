@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  
+  nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav a {
+    padding: 10px 25px;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    background: blue;
+    font-family: sans-serif;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  nav a.active,
+  nav a:hover {
+    background: darkblue;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 7rem;
+    font-family: sans-serif;
+    flex-direction: column;
+  }
+  
+  section:nth-child(odd) {
+    background: #eee;
+  }
+  
+  section p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  #section-1 {
+    height: 200px;
+  }
+  
+  #section-2 {
+    height: 800px;
+  }
+  
+  #section-3 {
+    height: 400px;
+  }
+  
+  #section-4 {
+    height: 1200px;
+  }
+  
+  #section-5 {
+    height: 600px;
+  }
+  

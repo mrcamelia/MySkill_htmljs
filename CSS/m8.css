@@ -1,0 +1,128 @@
+#demo{
+    color: red;
+}
+
+article p:first-of-type {
+    color: red;
+    font-size: 1.5em;
+  }
+
+/* M5 */
+.button {
+background: #ff00ff;
+}
+.my-element {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, calc(1rem + 3vw), 2rem);
+}
+
+/* M7 */
+html {
+    color: lightslategray;
+  }
+  strong {
+    font-weight: 900;
+  }
+  .my-component {
+    font-weight: 500;
+  }
+  .my-component strong {
+    font-weight: inherit;
+  }
+  /* System font stack to show the difference in weights */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+      helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  }
+  .my-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background: #eabdb3;
+    font: inherit;
+    text-align: center;
+  }  
+  /* The button will inherit this style */
+  article a {
+    color: #7c3626;
+  }
+  .my-button:hover {
+    background: #e2a294;
+  } 
+  /* aside strong {
+    font-weight: initial;
+  } */
+  /* presentational styles */
+  article > * + * {
+    margin-top: 1em;
+  }
+
+/* M8 */
+.swatch {
+  padding: 0.5rem;
+  border: 1px solid var(--color-stroke);
+}
+.swatch__sample {
+  height: 120px;
+  border: 1px solid var(--color-stroke);
+  margin-bottom: 1rem;
+}
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 12rem), 1fr)
+  );
+  gap: 1rem;
+  padding: 0;
+}
+li + li {
+  margin: 0;
+}
+.swatch {
+  padding: 0.5rem;
+  border: 1px solid var(--color-stroke);
+}
+.swatch__sample {
+  height: 120px;
+  border: 1px solid var(--color-stroke);
+  margin-bottom: 1rem;
+}
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 12rem), 1fr)
+  );
+  gap: 1rem;
+  padding: 0;
+}
+li + li {
+  margin: 0;
+}
+.swatch {
+  padding: 0.5rem;
+  border: 1px solid var(--color-stroke);
+}
+.swatch__sample {
+  height: 120px;
+  border: 1px solid var(--color-stroke);
+  margin-bottom: 1rem;
+}
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 12rem), 1fr)
+  );
+  gap: 1rem;
+  padding: 0;
+}
+li + li {
+  margin: 0;
+}
+
+
+  
+
+  
