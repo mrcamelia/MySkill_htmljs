@@ -1,0 +1,121 @@
+input[type="submit"]::-moz-focus-inner,
+button[type="submit"]::-moz-focus-inner,
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+%btns {
+  border: 0;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: .02em;
+  
+  &:focus {
+    outline-offset: 4px;
+    outline: 3px solid #06aed5;
+  }
+}
+
+/*
+  Default Toggle Button Styles
+*/
+.demo-btn {
+  @extend %btns;
+  background: green;
+  color: #fff;
+  min-width: 200px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  
+  :hover {
+    background: darken(green, 5%);
+  }
+    
+  span {
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: text-indent .2s ease-in-out;
+    width: 100%;
+  }
+  
+  svg {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+/*
+  Initial Text and checkmark positioning
+*/
+.demo-btn__txt {
+  text-indent: 0%;
+}
+
+.demo-btn__check {
+  text-indent: 200%;
+}
+
+
+/* 
+  Styles for 'pressed' button state
+*/
+.demo-btn[aria-pressed="true"] {
+  background: darkred;
+  
+  .demo-btn__txt {
+    text-indent: -20%;
+  }
+  
+  .demo-btn__check {
+    text-indent: 60%;
+  }
+}
+
+
+
+/* other demo styling */
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  line-height: 1.35;
+  padding: 20px;
+}
+
+.item {
+  border: 1px solid;
+  max-width: 400px;
+  padding: 20px;
+
+  h3 {
+    margin: 0 0 .625em;
+  }
+
+  p {
+    margin: 0 0 1.25em;;
+  }
+}
+
+
+button[type="submit"] {
+  @extend %btns;
+  background: #faba4c;
+  border: 2px solid;
+  color: #000;
+  margin-top: 1.25em;
+  padding: .5em 1.25em;
+  
+  &:hover,
+  &:focus {
+    background: lighten(#faba4c, 5%);
+  }
+}
