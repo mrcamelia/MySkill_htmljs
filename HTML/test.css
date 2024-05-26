@@ -1,75 +1,113 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: #49B749;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.todo-wrapper {
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  font-weight: 300;
+}
+
+.todo-wrapper h2 {
+  margin: 0;
+}
+
+.todo-wrapper p {
+  font-style: italic;
+  color: #666;
+  margin: 5px 0;
+}
+
+.todo-wrapper ol {
+  margin: 20px 0;
+}
+
+.todo-wrapper ol li {
+  margin: 5px 0;
+  padding: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.todo-wrapper ol li:nth-child(even) {
+  background: #ddd;
+}
+
+.todo-wrapper .completed {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.todo-wrapper .pretty-button {
+  margin: 10px 2px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: #0093D5;
+  border: none;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  font-size: small;
+}
+
+.todo-wrapper .pretty-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.todo-wrapper input {
+  padding: 3px 6px;
+}
+
+.todo-wrapper form {
+  display: inline-block;
+}
+
+#control-wrapper {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.todo-wrapper #clear-button {
+  background-color: #49B749;
+}
+
+.todo-wrapper #empty-button {
+  background-color: #9B1C20;
+}
+
+.todo-wrapper #save-button {
+  background-color: #49B749;
+}
+
+@media only screen and (min-width: 1400px) {
+  .todo-wrapper {
+      width: 50%;
+  }
+
+  .todo-wrapper input {
+      width: 600px;
   }
   
-  html {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-    height: 100vh;
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 750px) {
+  .todo-wrapper {
+      width: 75%;
   }
-  
-  nav {
-    display: flex;
-    position: sticky;
-    top: 0;
+
+  .todo-wrapper input {
+      width: 400px;
   }
-  
-  nav a {
-    padding: 10px 25px;
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
-    background: blue;
-    font-family: sans-serif;
-    flex: 1;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  nav a.active,
-  nav a:hover {
-    background: darkblue;
-  }
-  
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-size: 7rem;
-    font-family: sans-serif;
-    flex-direction: column;
-  }
-  
-  section:nth-child(odd) {
-    background: #eee;
-  }
-  
-  section p {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  
-  #section-1 {
-    height: 200px;
-  }
-  
-  #section-2 {
-    height: 800px;
-  }
-  
-  #section-3 {
-    height: 400px;
-  }
-  
-  #section-4 {
-    height: 1200px;
-  }
-  
-  #section-5 {
-    height: 600px;
-  }
-  
+}
